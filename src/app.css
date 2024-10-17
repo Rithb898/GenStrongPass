@@ -1,0 +1,87 @@
+.char-length-slider {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 100%;
+  height: 7px;
+  margin-bottom: 3.6rem;
+  background: hsl(248, 15%, 11%);
+  background-image: linear-gradient(hsl(127, 100%, 82%), hsl(127, 100%, 82%));
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+}
+
+/*************************/
+/*CHROME*/
+.char-length-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+.char-length-slider::-webkit-slider-thumb:hover {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+.char-length-slider::-webkit-slider-runnable-track  {
+  -webkit-appearance: none;
+  box-shadow: none;
+  border: none;
+  background: transparent;
+}
+
+/*************************/
+/*FIREFOX*/
+.char-length-slider::-moz-range-thumb {
+  -moz-appearance: none;
+  height: 28px;
+  width: 28px;
+  border: 2px solid hsl(252, 11%, 91%);
+  border-radius: 50%;
+  background-color: hsl(252, 11%, 91%);
+  cursor: pointer;
+}
+
+.char-length-slider::-moz-range-thumb:hover,
+.char-length-slider::-moz-range-thumb:active {
+  border: 2px solid hsl(127, 100%, 82%);
+  background-color: hsl(248, 15%, 11%);
+}
+
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 23px;
+  height: 23px;
+  border: 2px solid white;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Change the background color */
+input[type="checkbox"]:checked {
+  background-color: #4CAF50; /* Change to your desired bg color */
+}
+
+/* Style the tick mark */
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  color: black; /* Tick mark color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input[type="checkbox"]:hover {
+  border: 2px solid hsl(127, 100%, 82%);
+}
+
+
+
