@@ -51,7 +51,10 @@ function App() {
       .map(([key, _]) => charSets[key])
       .join("");
 
-    let pass = Array.from({ length }, () => str[Math.floor(Math.random() * str.length)]).join("");
+    let pass = Array.from(
+      { length },
+      () => str[Math.floor(Math.random() * str.length)]
+    ).join("");
 
     setPassword(pass);
     setPassAvailable(false);
@@ -76,7 +79,7 @@ function App() {
     const max = slider.max;
     const val = slider.value;
 
-    slider.style.backgroundSize = ((val - min) * 100) / (max - min) + '% 100%';
+    slider.style.backgroundSize = ((val - min) * 100) / (max - min) + "% 100%";
   }, []);
 
   useEffect(() => {
@@ -106,7 +109,9 @@ function App() {
                 : "flex justify-center items-center gap-3"
             }
           >
-            <span className="text-[#a3ffae] sm:text-lg">{copied ? "Copied" : null}</span>
+            <span className="text-[#a3ffae] sm:text-lg">
+              {copied ? "Copied" : null}
+            </span>
             <button onClick={handleCopy} className="w-10 h-10 hover:text-white">
               <svg
                 width="21"
@@ -170,25 +175,27 @@ function App() {
               </span>
             </div>
           </div>
-          <button
-            className="bg-[#a3ffae] sm:mx-8 mx-8 my-5 px-5 py-4 sm:w-[475px] w-[351px] flex justify-center items-center gap-5 rounded-md"
-            onClick={passwordGenerator}
-          >
-            <span className="text-[#23222a] sm:text-lg font-bold">
-              GENERATE
-            </span>
-            <svg
-              width="12"
-              height="12"
-              xmlns="http://www.w3.org/2000/svg"
-              aria-hidden="true"
+          <div className="px-8 py-3 pb-5">
+            <button
+              className="bg-[#a3ffae] px-5 py-4 sm:w-full w-full flex justify-center items-center gap-5 rounded-md"
+              onClick={passwordGenerator}
             >
-              <path
-                fill="#24232C"
-                d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
-              ></path>
-            </svg>
-          </button>
+              <span className="text-[#23222a] sm:text-lg font-bold">
+                GENERATE
+              </span>
+              <svg
+                width="12"
+                height="12"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  fill="#24232C"
+                  d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+                ></path>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </div>
