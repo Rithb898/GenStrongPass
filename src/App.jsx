@@ -86,10 +86,10 @@ function App() {
   return (
     <div className="w-screen h-screen flex justify-center items-center sm:p-4 p-2">
       <div className="w-full max-w-[540px] h-auto flex flex-col items-center">
-        <h1 className="text-2xl font-bold text-[#807c92] mb-8">
+        <h1 className="text-2xl font-bold text-[#807c92] sm:mb-8 mb-4">
           Password Generator
         </h1>
-        <div className="bg-[#23222a] w-full h-[80px] sm:px-8 px-7 flex items-center justify-between mb-8">
+        <div className="bg-[#23222a] w-full h-[80px] sm:px-8 px-6 flex items-center justify-between sm:mb-8 mb-4">
           <span
             className={
               passAvailable
@@ -121,14 +121,14 @@ function App() {
         </div>
         <div className="w-full h-auto bg-[#23222a]">
           <div className="flex justify-between">
-            <span className="text-[#e7e6eb] px-8 py-7 text-lg">
+            <span className="text-[#e7e6eb] sm:px-8 px-6 sm:py-7 py-5 text-lg">
               Character Length
             </span>
-            <span className="px-8 pt-7 text-3xl text-[#a3ffae] font-bold">
+            <span className="sm:px-8 px-6 sm:pt-7 pt-5 text-3xl text-[#a3ffae] font-bold">
               {length}
             </span>
           </div>
-          <div className="px-8">
+          <div className="sm:px-8 px-6">
             <input
               type="range"
               min={5}
@@ -141,14 +141,14 @@ function App() {
               ref={lengthSliderRef}
             />
           </div>
-          <div className="px-8">
+          <div className="sm:px-8 px-6">
             {Object.entries(options).map(([option, value]) => (
               <div key={option} className="flex items-center gap-x-1">
                 <input
                   type="checkbox"
                   checked={value}
                   id={option}
-                  className="mb-5"
+                  className="sm:mb-5 mb-4"
                   onChange={() => handleOptionChange(option)}
                 />
                 <label
@@ -160,7 +160,7 @@ function App() {
               </div>
             ))}
           </div>
-          <div className="bg-[#191820] my-3 mx-8 px-8 h-[72px] flex justify-between items-center">
+          <div className="bg-[#191820] my-3 mx-8 sm:px-8 px-6 h-[72px] flex justify-between items-center">
             <span className="text-[#807c92] sm:text-xl font-bold">
               STRENGTH
             </span>
