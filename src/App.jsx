@@ -181,7 +181,7 @@ function App() {
               onClick={passwordGenerator}
             >
               <span className="text-[#23222a] sm:text-lg font-bold">
-                GENERATE
+                GENERATEE
               </span>
               <svg
                 width="12"
