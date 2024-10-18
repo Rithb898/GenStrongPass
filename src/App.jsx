@@ -171,7 +171,7 @@ function App() {
             </div>
           </div>
           <button
-            className="bg-[#a3ffae] sm:mx-8 mx-8 my-5 px-5 py-4 sm:w-[475px] w-[334px] flex justify-center items-center gap-5 rounded-md"
+            className="bg-[#a3ffae] sm:mx-8 mx-8 my-5 px-5 py-4 sm:w-[475px] w-[351px] flex justify-center items-center gap-5 rounded-md"
             onClick={passwordGenerator}
           >
             <span className="text-[#23222a] sm:text-lg font-bold">
