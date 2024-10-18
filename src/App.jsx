@@ -84,7 +84,7 @@ function App() {
   }, [length, styleRangeSlider]);
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center p-4">
+    <div className="w-screen h-screen flex justify-center items-center sm:p-4 p-2">
       <div className="w-full max-w-[540px] h-auto flex flex-col items-center">
         <h1 className="text-2xl font-bold text-[#807c92] mb-8">
           Password Generator
